@@ -47,7 +47,7 @@ func testMain(m *testing.M) int {
 	bin.Close()
 	defer os.Remove(bin.Name())
 	if runtime.GOOS != "android" {
-		if out, err := exec.Command("go", "build", "-o", bin.Name(), "golang.org/x/mobile/cmd/gobind").CombinedOutput(); err != nil {
+		if out, err := exec.Command("go", "build", "-o", bin.Name(), "github.com/libmonsoon-dev/mobile/cmd/gobind").CombinedOutput(); err != nil {
 			log.Fatalf("gobind build failed: %v: %s", err, out)
 		}
 		gobindBin = bin.Name()

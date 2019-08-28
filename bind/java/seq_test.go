@@ -42,7 +42,7 @@ func testMain(m *testing.M) int {
 		if out, err := exec.Command("go", "build", "-o", gomobileBin, "golang.org/x/mobile/cmd/gomobile").CombinedOutput(); err != nil {
 			log.Fatalf("gomobile build failed: %v: %s", err, out)
 		}
-		if out, err := exec.Command("go", "build", "-o", gobindBin, "golang.org/x/mobile/cmd/gobind").CombinedOutput(); err != nil {
+		if out, err := exec.Command("go", "build", "-o", gobindBin, "github.com/libmonsoon-dev/mobile/cmd/gobind").CombinedOutput(); err != nil {
 			log.Fatalf("gobind build failed: %v: %s", err, out)
 		}
 		PATH := os.Getenv("PATH")
